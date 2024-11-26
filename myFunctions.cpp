@@ -1,7 +1,7 @@
 #pragma once
 #include "myFunctions.h"
 #include <codecvt>
-#include <cwctype>  // Pour std::iswalpha
+#include <cwctype>  
 #include <filesystem>
 #include <locale>
 
@@ -9,8 +9,8 @@ using namespace std;
 
 namespace MM{
 	
-	bool newParsedFile(std::ifstream& file, const std::string newfileName) { // créé un nouveau fichier avec seulement
-		string line;														// les premiers éléments parser de chaque ligne
+	bool newParsedFile(std::ifstream& file, const std::string newfileName) { 
+		string line;
 		string word;
 		vector<std::vector<std::string>> table;
 		ofstream newFile(newfileName.c_str());
@@ -141,22 +141,22 @@ namespace MM{
 		}
 		else {
 			for (int i = 0; i < 2; i++) {
-				if ((cl1 == L'é' || cl1 == L'è' || cl1 == L'ê') && cl2 == L'e') {
+				if ((cl1 == L'Ã©' || cl1 == L'Ã¨' || cl1 == L'Ãª') && cl2 == L'e') {
 					return 1;
 				}
-				else if ((cl1 == L'ù' || cl1 == L'û') && cl2 == L'u') {
+				else if ((cl1 == L'Ã¹' || cl1 == L'Ã»') && cl2 == L'u') {
 					return 1;
 				}
-				else if (cl1 == L'ô' && cl2 == L'o') {
+				else if (cl1 == L'Ã´' && cl2 == L'o') {
 					return 1;
 				}
-				else if (cl1 == L'î' && cl2 == L'i') {
+				else if (cl1 == L'Ã®' && cl2 == L'i') {
 					return 1;
 				}
-				else if ((cl1 == L'à' || cl1 == L'â') && cl2 == L'a') {
+				else if ((cl1 == L'Ã ' || cl1 == L'Ã¢') && cl2 == L'a') {
 					return 1;
 				}
-				else if (cl1 == L'ç' && cl2 == L'c') {
+				else if (cl1 == L'Ã§' && cl2 == L'c') {
 					return 1;
 				}
 				temp = cl2;

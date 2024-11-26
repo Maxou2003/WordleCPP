@@ -7,7 +7,7 @@
 
 ## ℹ️ Overview
 
-I'm a computer student at Polytech Angers, France, and I wanted to practice C++ file and encoding management.
+I'm a computer student at Polytech Angers, France, and I wanted to practice C++ file and encoding management. So I coded this little game where you have to guess a 5 letter word in les then 6 attempts.
 
 
 ### ✍️ Authors
